@@ -25,7 +25,7 @@ const Navbar = () => {
             </div>
             <div className="hidden sm:block">
               <h1 className="font-heading font-bold text-lg">MAGI</h1>
-              <p className="text-xs text-muted-foreground">Assembly of God</p>
+              <p className="text-xs text-muted-foreground">Magalang Assembly of God</p>
             </div>
           </div>
 

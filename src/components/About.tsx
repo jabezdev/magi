@@ -1,5 +1,32 @@
+// About.tsx
 import { MapPin, Clock, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { LatLngExpression } from "leaflet";
+import "leaflet/dist/leaflet.css";
+
+const center: LatLngExpression = [15.219228595627763, 120.6799986292217];
+
+// Separate MapCard component
+function MapCard() {
+  return (
+    <Card className="overflow-hidden shadow-warm">
+      <MapContainer
+        center={center}
+        zoom={13}
+        style={{ height: "24rem", width: "100%" }} // Matches Tailwind h-96
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={center}>
+          <Popup>Hello from Manila!</Popup>
+        </Marker>
+      </MapContainer>
+    </Card>
+  );
+}
 
 const About = () => {
   return (
@@ -16,6 +43,7 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Location Card */}
             <Card className="p-6 text-center shadow-warm hover:shadow-glow transition-smooth">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-primary flex items-center justify-center">
                 <MapPin className="text-primary-foreground" size={32} />
@@ -30,6 +58,7 @@ const About = () => {
               </p>
             </Card>
 
+            {/* Service Times */}
             <Card className="p-6 text-center shadow-warm hover:shadow-glow transition-smooth">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-primary flex items-center justify-center">
                 <Clock className="text-primary-foreground" size={32} />
@@ -44,6 +73,7 @@ const About = () => {
               </p>
             </Card>
 
+            {/* First Time */}
             <Card className="p-6 text-center shadow-warm hover:shadow-glow transition-smooth">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-primary flex items-center justify-center">
                 <Users className="text-primary-foreground" size={32} />
@@ -55,12 +85,8 @@ const About = () => {
             </Card>
           </div>
 
-          {/* Map Placeholder */}
-          <Card className="overflow-hidden shadow-warm">
-            <div className="w-full h-96 bg-muted flex items-center justify-center">
-              <p className="text-muted-foreground">Google Maps Embed Placeholder</p>
-            </div>
-          </Card>
+          {/* Embedded Leaflet Map Card */}
+          <MapCard />
         </div>
       </div>
     </section>
