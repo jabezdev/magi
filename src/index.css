@@ -131,3 +131,23 @@ All colors MUST be HSL.
     transition: var(--transition-bounce);
   }
 }
+
+/* Lower the z-index of Leaflet map panes */
+.leaflet-pane,
+.leaflet-control {
+  z-index: 0 !important;
+}
+
+.leaflet-control-zoom {
+  display: none !important;
+}
+
+.leaflet-control-attribution,
+.leaflet-control-attribution * {
+  z-index: 0 !important;
+  position: relative !important;
+}
+
+.leaflet-bottom.leaflet-right {
+  z-index: 0 !important;
+}

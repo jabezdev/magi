@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import MAGILogo from "@/assets/MAGI-Logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,9 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full gradient-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-lg">M</span>
+              <span className="text-primary-foreground font-heading font-bold text-lg">
+                <img src={MAGILogo} alt="MAGI Logo" className="w-8 h-8 object-contain" />
+              </span>
             </div>
             <div className="hidden sm:block">
               <h1 className="font-heading font-bold text-lg">MAGI</h1>

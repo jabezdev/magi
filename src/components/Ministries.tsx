@@ -4,12 +4,14 @@ import childrenMinistry from "@/assets/children-ministry.jpg";
 import youthMinistry from "@/assets/youth-ministry.jpg";
 import outreachMinistry from "@/assets/outreach-ministry.jpg";
 import prayerHands from "@/assets/prayer-hands.jpg";
+import { Link } from "react-router-dom";
 
 const ministries = [
   {
     title: "Children's Ministry",
     description: "Nurturing young hearts to know and love Jesus through engaging activities, Bible stories, and worship.",
     image: childrenMinistry,
+    link: "/ChildrensMinistry"
   },
   {
     title: "Youth Ministry",
@@ -61,7 +63,9 @@ const Ministries = () => {
                     {ministry.description}
                   </p>
                   <Button variant="outline">
-                    Learn More
+                    <Link to={ministry.link}>
+                    Check it out!
+                    </Link>
                   </Button>
                 </div>
               </Card>

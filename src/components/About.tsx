@@ -7,6 +7,8 @@ import "leaflet/dist/leaflet.css";
 
 const center: LatLngExpression = [15.219228595627763, 120.6799986292217];
 
+
+
 // Separate MapCard component
 function MapCard() {
   return (

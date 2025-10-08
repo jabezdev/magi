@@ -14,7 +14,7 @@ const upcomingEvents = [
     title: "Thursday Night Prayer",
     date: "Every Thursday",
     time: "7:00 PM",
-    location: "Online via Zoom",
+    location: "Online via Facebook Live",
     description: "Connect with our community in prayer and seek God's presence together.",
   },
   {
@@ -64,7 +64,7 @@ const Events = () => {
                   {event.description}
                 </p>
                 <Button variant="outline" className="w-full">
-                  Register
+                  Join
                 </Button>
               </Card>
             ))}
