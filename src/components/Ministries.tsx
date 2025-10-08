@@ -5,6 +5,7 @@ import youthMinistry from "@/assets/youth-ministry.jpg";
 import outreachMinistry from "@/assets/outreach-ministry.jpg";
 import prayerHands from "@/assets/prayer-hands.jpg";
 import { Link } from "react-router-dom";
+import { title } from "process";
 
 const ministries = [
   {
@@ -28,6 +29,11 @@ const ministries = [
     description: "Encountering God's presence through powerful worship, intercessory prayer, and spiritual growth.",
     image: prayerHands,
   },
+  {
+    title: "Operation Home Based (OHB)",
+    description: "Helping the less fortunate through our outreach programs and community services.",
+    image: prayerHands,
+  }
 ];
 
 const Ministries = () => {
@@ -62,11 +68,13 @@ const Ministries = () => {
                   <p className="text-muted-foreground mb-4">
                     {ministry.description}
                   </p>
+                  <div className="flex justify-center">
                   <Button variant="outline">
                     <Link to={ministry.link}>
                     Check it out!
                     </Link>
                   </Button>
+                  </div>
                 </div>
               </Card>
             ))}
