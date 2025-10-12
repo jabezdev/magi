@@ -28,6 +28,17 @@ const ChildrensMinistry = () => {
         An Image will be placed here.
       </h2>
     </Card>
+    <Card className="my-8 p-6 mx-4 md:mx-20 lg:mx-40">
+      <h2 className="text-center">
+        This is a Card component example on the Children's Ministry page. <br/>
+        An Image will be placed here.
+      </h2>
+    </Card>
+    <Card className="my-8 p-6 mx-4 md:mx-20 lg:mx-40">
+      <h2 className="text-center">
+        Testing this one
+      </h2>
+    </Card>
     <Footer/>
     </>
   );
